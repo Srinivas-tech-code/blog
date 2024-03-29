@@ -17,11 +17,12 @@ const open=()=>{
 
 
   const [showArea,setShowArea]=useState(false)
+  const [showUpload,setShowUpload]=useState(false)
   
 
 
 const first=()=> {
-  setShowArea(!showArea)
+  setShowUpload(!showUpload)
 }
 
 const second=()=>{
@@ -33,12 +34,13 @@ const third=()=>{
 }
 
 const fourth=()=>{
-  setShowArea(!showArea)
+  setShowUpload(!showUpload)
 }
 
 const fifth=()=>{
   setShowArea(!showArea)
 }
+
 
 
 
@@ -77,7 +79,8 @@ const fifth=()=>{
         <div id='writeherediv' contentEditable='true' className={showArea?styles.open:styles.close} >
               
         </div>
-    </div>
+          <input id='uploadablediv' className={showUpload?styles.newopen:styles.newclose} type='file' accept='video/*,image/png,image/jpg'/>
+        </div>
     </>
 )
 
